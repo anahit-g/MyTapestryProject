@@ -6,7 +6,7 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>myTapestryProject Tapestry 5 Application</name>
-        <dependencies>
+    <dependencies>
         <!-- To set up an application with a database, change the artifactId below to
              tapestry-hibernate, and add a dependency on your JDBC driver. You'll also
              need to add Hibernate configuration files, such as hibernate.cfg.xml. -->
@@ -14,6 +14,18 @@
             <groupId>org.apache.tapestry</groupId>
             <artifactId>tapestry-core</artifactId>
             <version>${tapestry-release-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.tapestry</groupId>
+            <artifactId>tapestry-hibernate</artifactId>
+            <version>${tapestry-release-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
         </dependency>
 
         <!-- Include the Log4j implementation for the SLF4J logging framework -->
@@ -126,7 +138,7 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
 
     <repositories>
 
-      <repository>
+        <repository>
             <id>jboss</id>
             <url>http://repository.jboss.org/nexus/content/groups/public/</url>
         </repository>
@@ -144,6 +156,6 @@ of testing facilities designed for use with TestNG (http://testng.org/), so it's
         <servlet-api-release-version>2.5</servlet-api-release-version>
         <testng-release-version>6.8.21</testng-release-version>
         <slf4j-release-version>1.7.13</slf4j-release-version>
-
+        <mysql.version>5.1.38</mysql.version>
     </properties>
 </project>
