@@ -2,7 +2,7 @@ package com.example.myTapestry.pages;
 
 
 import com.example.myTapestry.entities.User;
-import com.example.myTapestry.services.myServices.impl.UserServiceImpl;
+import com.example.myTapestry.services.myServices.IUserService;
 import org.apache.tapestry5.annotations.Property;
 import org.apache.tapestry5.ioc.annotations.Inject;
 
@@ -15,7 +15,7 @@ public class Index
 {
 
   @Inject
-  private UserServiceImpl userService;
+  private IUserService userService;
 
   @Property
   private List<User> users;
