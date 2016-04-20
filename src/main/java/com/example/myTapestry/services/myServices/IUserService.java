@@ -11,6 +11,8 @@ public interface IUserService {
 
     public User getUserById(long id);
 
+    public User getUserByEmailPassword(String email, String password);
+
     public List<User> getUsers();
 
     public void addUser(User user);

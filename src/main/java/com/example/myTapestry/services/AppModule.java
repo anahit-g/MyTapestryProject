@@ -2,6 +2,8 @@ package com.example.myTapestry.services;
 
 import java.io.IOException;
 
+import com.example.myTapestry.services.myServices.impl.AuthServiceImpl;
+import com.example.myTapestry.services.myServices.IAuthService;
 import com.example.myTapestry.services.myServices.IUserService;
 import com.example.myTapestry.services.myServices.impl.UserServiceImpl;
 import org.apache.tapestry5.*;
@@ -24,6 +26,7 @@ public class AppModule
     public static void bind(ServiceBinder binder)
     {
          binder.bind(IUserService.class, UserServiceImpl.class);
+         binder.bind(IAuthService.class, AuthServiceImpl.class);
 
         // Make bind() calls on the binder object to define most IoC services.
         // Use service builder methods (example below) when the implementation

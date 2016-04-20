@@ -11,14 +11,16 @@ import java.util.List;
 /**
  * Start page of application myTapestryProject.
  */
-public class Index
-{
+public class Index {
 
   @Inject
   private IUserService userService;
 
   @Property
   private List<User> users;
+
+  @Property
+  private User user;
 
 //  @Inject
 //  private Logger logger;

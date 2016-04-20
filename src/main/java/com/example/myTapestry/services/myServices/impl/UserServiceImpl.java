@@ -21,13 +21,23 @@ public class UserServiceImpl implements IUserService {  /* bind it in AppModule 
     }
 
     @Override
+    public User getUserByEmailPassword(String email, String password) {
+        return null;
+    }
+
+    @Override
     public List<User> getUsers() {
         return session.createCriteria(User.class).list();
     }
 
     @Override
     public void addUser(User user) {
-        session.save(user);
+        try{
+            session.save(user);
+            session.getTransaction().commit();
+        } catch (Exception e) {
+            session.getTransaction().rollback();
+        }
     }
 
     @Override

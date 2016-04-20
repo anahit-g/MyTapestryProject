@@ -35,7 +35,8 @@
             <!--</ul>-->
             <span class="navbar-right">
                 <li>
-                    <t:pagelink page="login" class="btn btn-default navbar-btn">Sign in</t:pagelink>
+                    <t:pagelink page="login" class="btn btn-default navbar-btn">Sign in</t:pagelink>&nbsp;
+                    <t:pagelink page="registration" class="btn btn-default navbar-btn">Registration</t:pagelink>
                	</li>
             </span>
 

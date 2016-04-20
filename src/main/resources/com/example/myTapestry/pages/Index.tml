@@ -1,6 +1,13 @@
 <html t:type="layout" title="myTapestryProject Index"
       xmlns:t="http://tapestry.apache.org/schema/tapestry_5_4.xsd"
         >
+<p>Users</p>
+<ul t:type="loop" source="users" value="user">
+    <a t:type="pagelink" page="about"
+       context="user.id">
+        ${user.name}&nbsp;${user.surname}
+    </a>
+</ul>
 
     <!--&lt;!&ndash; Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml &ndash;&gt;-->
 
